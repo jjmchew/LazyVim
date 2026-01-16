@@ -1,9 +1,24 @@
 return {
   {
     "nvim-treesitter/nvim-treesitter",
-    opts = function(_, opts)
-      opts.ensure_installed = opts.ensure_installed or {}
-      vim.list_extend(opts.ensure_installed, { "graphql", "javascript", "typescript", "tsx" })
+    opts = {
+      ensure_installed = {
+        "graphql",
+        "javascript",
+        "typescript",
+        "tsx",
+      },
+    },
+  },
+  {
+    "jparise/vim-graphql",
+    ft = { "javascript", "javascriptreact", "typescript", "typescriptreact" },
+    init = function()
+      -- highlight in tagged template literals: gql`...` / graphql`...`
+      vim.g.graphql_javascript_tags = { "gql", "graphql" }
+
+      -- If you use Relay-style: graphql`...`
+      vim.g.graphql_relay_tags = { "graphql" }
     end,
   },
 }
