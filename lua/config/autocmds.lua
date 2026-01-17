@@ -7,3 +7,10 @@ vim.api.nvim_set_hl(0, "GitSignsCurrentLineBlame", {
   fg = "#7E9CD8", -- dragonBlue
   italic = true,
 })
+
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = { "markdown", "mdx" },
+  callback = function()
+    vim.opt_local.conceallevel = 0
+  end,
+})
