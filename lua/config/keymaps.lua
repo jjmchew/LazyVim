@@ -6,3 +6,6 @@ vim.keymap.del({ "v" }, "<A-k>")
 vim.keymap.set("n", "<leader>gl", function()
   require("gitsigns").toggle_current_line_blame()
 end, { desc = "Toggle Git blame (inline)" })
+vim.keymap.set("n", "<leader>gD", "<cmd>Gitsigns toggle_deleted<cr>", {
+  desc = "Toggle Deleted Lines",
+})
