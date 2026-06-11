@@ -9,3 +9,4 @@ end, { desc = "Toggle Git blame (inline)" })
 vim.keymap.set("n", "<leader>gD", "<cmd>Gitsigns toggle_deleted<cr>", {
   desc = "Toggle Deleted Lines",
 })
+vim.keymap.set("n", "<leader>gm", "<cmd>Gitsigns change_base main<cr>", { desc = "Gitsigns: change base to main" })

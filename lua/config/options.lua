@@ -13,4 +13,3 @@ opt.foldlevel = 99
 
 vim.g.autoformat = true
 vim.g.lazyvim_eslint_auto_format = true
-vim.g.lazyvim_no_inlay_hints = true
